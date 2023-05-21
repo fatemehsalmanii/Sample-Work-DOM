@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add to List</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body>
+    <h1>Add to List</h1>
+    <input type="text" id="input1" placeholder="Enter text here"/>
+    <br/>
+    <br/>
+    <input type="text" id="input2" placeholder="Enter text here"/>
+    <br/>
+    <br/>
+    <button onclick="addItem()">Add Item</button>
+    <ul id="list"></ul>
+
+    <script>
+      function addItem() {
+        var item1 = document.getElementById("input1").value;
+        var item2 = document.getElementById("input2").value;
+        var list = document.getElementById("list");
+        var newItem1 = document.createElement("li");
+        newItem1.appendChild(document.createTextNode(item1));
+        list.appendChild(newItem1);
+        var newItem2 = document.createElement("li");
+        newItem2.appendChild(document.createTextNode(item2));
+        list.appendChild(newItem2);
+      }
+    </script>
+  </body>
+</html>
